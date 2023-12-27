@@ -69,7 +69,7 @@ function Contact() {
               <span className="w-[30px] h-[2px] bg-primary"></span>
               Say Hello
             </div>
-            <h1 className="text-2xl font-semibold mb-8">Let's Connect</h1>
+            <h1 className="h1 max-w-md mb-8">Let's Connect</h1>
             <p className="subtitle max-w-[400px]">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Asperiores consequatur dolorum explicabo voluptate, libero ex

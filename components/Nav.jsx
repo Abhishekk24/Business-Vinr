@@ -8,7 +8,8 @@ const links = [
   { path: '/', name: 'home' },
   { path: '/partners', name: 'partners' },
   { path: '/contact', name: 'contact' },
-  {path:'/careers', name:'career'}
+  {path:'/careers', name:'career'},
+  // {path:'/gallery',name:'gallery'}
 ]
 
 function Nav({ containerStyles, linkStyles, underlineStyles }) {
