@@ -1,6 +1,65 @@
-import { Code, Cpu, HardDrive, LibraryBig } from "lucide-react";
+"use client"
+// Import necessary modules and icons
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import { Cpu, LibraryBig, Code } from 'lucide-react';
 
 function Careers() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    position: 'technical',
+    resume: null, // new state for the resume file
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleFileChange = (e) => {
+    // Update the state with the selected resume file
+    setFormData({ ...formData, resume: e.target.files[0] });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const templateParams = {
+        to_email: 'servicesvinrenterprises@gmail.com', // replace with recipient email
+        from_name: formData.name,
+        from_email: formData.email,
+        position: formData.position,
+        // include the resume in the templateParams
+        resume: formData.resume,
+      };
+
+      const serviceId = 'service_rm4bjtt';
+      const templateId = 'template_4np9sla';
+      const userId = 'HRtLV15DWQFnYZvFQ';
+
+      // Send email with application details and resume to recipient
+      const response = await emailjs.send(serviceId, templateId, templateParams, userId);
+
+      // Log response
+      console.log('Email Response:', response);
+
+      // Reset form fields on successful submission
+      setFormData({
+        name: '',
+        email: '',
+        position: 'technical',
+        resume: null,
+      });
+
+      // Display success message or perform any other action
+      console.log('Application sent successfully');
+    } catch (error) {
+      // Log any errors
+      console.error('Error sending application:', error);
+    }
+  };
+
   return (
     <section>
       <div className="container mx-auto">
@@ -59,7 +118,7 @@ function Careers() {
           </div>
           <div>
             {/* Application Form */}
-            <form className="max-w-md mb-24 xl:mb-48">
+            <form className="max-w-md mb-24 xl:mb-48" onSubmit={handleSubmit}>
               <div className="mb-4">
                 <label
                   htmlFor="name"
@@ -72,6 +131,8 @@ function Careers() {
                   id="name"
                   name="name"
                   className="mt-1 p-2 w-full border rounded-md"
+                  value={formData.name}
+                  onChange={handleChange}
                 />
               </div>
               <div className="mb-4">
@@ -86,6 +147,8 @@ function Careers() {
                   id="email"
                   name="email"
                   className="mt-1 p-2 w-full border rounded-md"
+                  value={formData.email}
+                  onChange={handleChange}
                 />
               </div>
               <div className="mb-4">
@@ -99,6 +162,8 @@ function Careers() {
                   id="position"
                   name="position"
                   className="mt-1 p-2 w-full border rounded-md"
+                  value={formData.position}
+                  onChange={handleChange}
                 >
                   <option value="technical">Technical Specialist</option>
                   <option value="accountant">Accountant</option>
@@ -106,24 +171,28 @@ function Careers() {
                   <option value="hardware">Hardware Engineer</option>
                 </select>
               </div>
+              {/* Resume Upload */}
+              <div className="mb-4">
+                <label
+                  htmlFor="resume"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  Upload Resume
+                </label>
+                <input
+                  type="file"
+                  id="resume"
+                  name="resume"
+                  className="mt-1 p-2 w-full border rounded-md"
+                  onChange={handleFileChange}
+                />
+              </div>
               <button
                 type="submit"
                 className="bg-primary text-white p-2 rounded-md mr-2"
               >
                 Apply Now
               </button>
-              <label
-                htmlFor="resume"
-                className="bg-primary text-white p-2 rounded-md cursor-pointer"
-              >
-                Upload Resume
-                <input
-                  type="file"
-                  id="resume"
-                  name="resume"
-                  className="hidden"
-                />
-              </label>
             </form>
           </div>
         </div>
