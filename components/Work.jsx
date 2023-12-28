@@ -154,7 +154,7 @@ const projectData = [
     site: 'https://www.tp-link.com',
   },
   {
-    image: '',
+    image: '/brands/ubiquiti.png',
     category: 'Ubiquiti',
     name: 'Ubiquiti',
     description: 'Ubiquiti offers innovative networking solutions, including wireless access points, routers, and surveillance equipment. Experience reliable and high-performance networking with Ubiquiti products.',

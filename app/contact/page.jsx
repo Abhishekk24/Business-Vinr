@@ -22,15 +22,16 @@ function Contact() {
     try {
       const templateParams = {
         to_email: 'servicesvinrenterprises@gmail.com', // replace with recipient email
+        to_name:'Vinayak Mali',
         from_name: formData.name,
         from_email: formData.email,
         contact_number: formData.contactNumber,
         message: formData.message,
       };
   
-      const serviceId = 'service_rm4bjtt';
-      const templateId = 'template_4np9sla';
-      const userId = 'HRtLV15DWQFnYZvFQ';
+      const serviceId = 'service_t1wkq3h';
+      const templateId = 'template_75kjmel';
+      const userId = 'BKx0mrH1KYZuedICQ';
   
       // Send email to recipient
       const responseRecipient = await emailjs.send(serviceId, templateId, templateParams, userId);
@@ -71,10 +72,7 @@ function Contact() {
             </div>
             <h1 className="h1 max-w-md mb-8">Let's Connect</h1>
             <p className="subtitle max-w-[400px]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores consequatur dolorum explicabo voluptate, libero ex
-              fugiat, similique odio perferendis voluptates architecto velit eos
-              delectus ipsam beatae vel modi magni. Reiciendis.
+            Embark on a seamless connection with Vinr Enterprises. For inquiries, collaborations, or a simple greeting, reach out to us. Let's make things happen together.
             </p>
           </div>
           <div>
@@ -96,21 +94,21 @@ function Contact() {
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 py-12">
           <div>
             {/* Contact information */}
-            <div className="mb-6">
+            <div className=" mb-6">
               <h2 className="text-2xl font-semibold mb-4">
                 Contact Information
               </h2>
               <div className="flex items-center mb-2">
                 <MailIcon className="w-6 h-6 mr-2" />
-                <span>Email: example@example.com</span>
+                <span>Email: vinayak@vinrenterprises.com</span>
               </div>
-              <div className="flex items-center mb-2">
+              <div className="flex items-center mb-2 py-1">
                 <PhoneCall className="w-6 h-6 mr-2" />
-                <span>Phone: +123 456 7890</span>
+                <span>Phone: +91 9168224365</span>
               </div>
-              <div className="flex items-center">
+              <div className="flex items-center ">
                 <HomeIcon className="w-6 h-6 mr-2" />
-                <span>Address: 123 Street, City, Country</span>
+                <span>Enarch Housing Society, Sambhaji Chowk Shop No. 1, <br/>Building No. 4, Complex, Untwadi Rd, Nashik</span>
               </div>
             </div>
           </div>

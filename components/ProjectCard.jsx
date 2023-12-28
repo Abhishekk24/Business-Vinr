@@ -22,7 +22,7 @@ const ProjectCard = ({project}) => {
         </CardHeader>
             <div className='h-full px-8 py-6'>
                 <Badge className='uppercase text-sm font-medium mb-2 absolute top-4 left-5'>{project.category}</Badge>
-                <h4>{project.name}</h4>
+                <h4><b>{project.name}</b></h4>
                 <p>{project.description}</p>
             </div>
         

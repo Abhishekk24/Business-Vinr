@@ -9,17 +9,17 @@ function Careers() {
     name: '',
     email: '',
     position: 'technical',
-    resume: null, // new state for the resume file
+    resume: '', // new state for the resume file
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleFileChange = (e) => {
-    // Update the state with the selected resume file
-    setFormData({ ...formData, resume: e.target.files[0] });
-  };
+  // const handleFileChange = (e) => {
+  //   // Update the state with the selected resume file
+  //   setFormData({ ...formData, resume: e.target.files[0] });
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,6 +27,7 @@ function Careers() {
     try {
       const templateParams = {
         to_email: 'servicesvinrenterprises@gmail.com', // replace with recipient email
+        to_name:'Vinayak Mali',
         from_name: formData.name,
         from_email: formData.email,
         position: formData.position,
@@ -34,9 +35,9 @@ function Careers() {
         resume: formData.resume,
       };
 
-      const serviceId = 'service_rm4bjtt';
-      const templateId = 'template_4np9sla';
-      const userId = 'HRtLV15DWQFnYZvFQ';
+      const serviceId = 'service_t1wkq3h';
+      const templateId = 'template_banv29f';
+      const userId = 'BKx0mrH1KYZuedICQ';
 
       // Send email with application details and resume to recipient
       const response = await emailjs.send(serviceId, templateId, templateParams, userId);
@@ -49,7 +50,7 @@ function Careers() {
         name: '',
         email: '',
         position: 'technical',
-        resume: null,
+        resume: '',
       });
 
       // Display success message or perform any other action
@@ -177,14 +178,15 @@ function Careers() {
                   htmlFor="resume"
                   className="block text-sm font-medium text-gray-700"
                 >
-                  Upload Resume
+                  Upload Resume Link
                 </label>
                 <input
-                  type="file"
+                  type="text"
                   id="resume"
                   name="resume"
                   className="mt-1 p-2 w-full border rounded-md"
-                  onChange={handleFileChange}
+                  value={formData.resume}
+                  onChange={handleChange}
                 />
               </div>
               <button
