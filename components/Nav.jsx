@@ -9,7 +9,7 @@ const links = [
   { path: '/partners', name: 'partners' },
   { path: '/contact', name: 'contact' },
   {path:'/careers', name:'career'},
-  // {path:'/gallery',name:'gallery'}
+  {path:'/blog',name:'Blogs'}
 ]
 
 function Nav({ containerStyles, linkStyles, underlineStyles }) {

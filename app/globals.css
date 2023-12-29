@@ -1,6 +1,6 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 @layer base {
   :root {
@@ -13,7 +13,7 @@
     --primary: 8 99% 67%;
     --primary-foreground: 300 0% 100%;
     --secondary: 240 19% 16%;
-    --secondary-foreground:300 0% 100%;
+    --secondary-foreground: 300 0% 100%;
     --tertiary: 27 82% 98%;
     --muted: 60 4.8% 95.9%;
     --muted-foreground: 237 13% 40%;
@@ -26,7 +26,7 @@
     --ring: 9 99% 67%;
     --radius: 0.5rem;
   }
- 
+
   .dark {
     --background: 237 22% 20%;
     --foreground: 60 9.1% 97.8%;
@@ -50,39 +50,45 @@
     --ring: 8 99% 67%;
   }
 }
-.h1{
+.h1 {
   @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold;
 }
-.h2{
-  @apply text-4xl font-bold
+.h2 {
+  @apply text-4xl font-bold;
 }
-.h3{
-  @apply text-3xl font-bold
+.h3 {
+  @apply text-3xl font-bold;
 }
-.h4{
-  @apply text-[22px] font-semibold
-}
-
-
-
-
-.subtitle{
-  @apply text-muted-foreground text-lg mb-8 font-light
+.h4 {
+  @apply text-[22px] font-semibold;
 }
 
-.section-title{
+.subtitle {
+  @apply text-muted-foreground text-lg mb-8 font-light;
+}
+
+.section-title {
   @apply text-4xl font-bold relative w-max flex items-center justify-between gap-x-3 
   before:bg-dot_light
   before:dark:bg-dot_dark before:bg-no-repeat before:bg-center
-  before:w-[30px] before:h-[24px]
+  before:w-[30px] before:h-[24px];
 }
 
-
-.badge{
+.badge {
   @apply z-10 w-[218px] h-[68px] bg-white dark:backdrop-blur-[44px] shadow-2xl p-4 rounded-[10px] flex items-center gap-x-4;
 }
 
-.swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullets, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullets{
+.swiper-horizontal > .section-pagination-bullets .swiper-pagination-bullets,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullets {
   @apply bg-primary;
+}
 
-} 
+.gradient-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  opacity: 0.9; /* You can adjust the opacity as needed */
+}
