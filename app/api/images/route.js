@@ -9,6 +9,6 @@ export const GET = async(request) => {
 
         return new Response(JSON.stringify(gallery), {status:200})
     } catch (error) {
-        return new Response("Failed to fetch blogs", {status:500})
+        return new Response("Failed to fetch images", {status:500})
     }
 }

@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import React, { useEffect, useState } from 'react';
 
 const Gallery = () => {
   // const images = [
@@ -16,13 +17,29 @@ const Gallery = () => {
 
   // ];
 
+  const [images, setimages] = useState(null)
+
+  const fetchGallery = async() => {
+    debugger;
+    const response = await fetch('/api/images')
+    const data = await response.json();
+    setimages(data);
+  }
+
+  useEffect(() => {
+    if(images == null){
+      fetchGallery()
+    }
+  }, [])
+  
+
   return (
     <div className="bg-gray-100 p-5">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {images.map((image, index) => (
+        {images?.map((image, index) => (
           <div key={index} className={`flex justify-center items-center ${index % 5 === 2 || index % 5 === 4 ? 'md:row-span-2' : ''}`}>
             <img
-              src={image}
+              src={image.imageURL}
               alt={`Image ${index + 1}`}
               className="w-full h-full object-cover rounded-md"
             />

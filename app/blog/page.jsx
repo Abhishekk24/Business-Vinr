@@ -153,15 +153,6 @@ const blogs = () => {
   return (
     <div className='mx-auto'>
       <ImageSlider images={images} />
-      {/* <div className="add-btn m-10">
-        {admins.includes(session?.user.email)?(
-          <>
-            <Link href={"/add-blog"} className='text-white bg-neutral-900 no-underline border border-black px-8 py-3 text-sm hover:text-white hover:border-red-500 hover:bg-red-500 transition duration-500 ease-in-out rounded-md'>Add Blog</Link>
-          </>):(
-          <></>
-          )
-        }
-      </div> */}
       <div className="feed flex flex-col px-4 sm:px-4 md:px-14 pt-16">
         <div className="title">
           <h2 className='text-6xl font-bold'>Latest Blogs</h2>
