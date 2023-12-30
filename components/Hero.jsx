@@ -16,14 +16,14 @@ import Socials from "./Socials"
 
 function Hero() {
   return (
-    <section className="py-12 xl:py-24 h-[84vh] xl:pt-28   bg-hero bg-no-repeat bg-cover bg-bottom dark:bg-none">
+    <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-cover bg-bottom dark:bg-none">
       <div className="container mx-auto">
         <div className="flex justify-between gap-x-8">
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
             <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
               Vinr Enterprises
             </div>
-            <h1 className="h1 mb-4">
+            <h1 className="h1 mb-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
               Networking and Solutions
             </h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0"></p>
