@@ -2,10 +2,7 @@ import React from 'react';
 import { RiYoutubeFill, RiLinkedinFill, RiFacebookFill, RiWhatsappFill, RiInstagramFill } from 'react-icons/ri';
 
 const icons = [
-  {
-    path: 'https://www.youtube.com',
-    name: <RiYoutubeFill />,
-  },
+  
   {
     path: 'https://www.facebook.com',
     name: <RiFacebookFill />,
@@ -19,7 +16,7 @@ const icons = [
     name: <RiInstagramFill />,
   },
   {
-    path: 'https://www.linkedin.com',
+    path: 'https://www.linkedin.com/company/vinr-enterprises---india/',
     name: <RiLinkedinFill />,
   },
 ];

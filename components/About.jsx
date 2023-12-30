@@ -112,13 +112,13 @@ function About() {
                         );
                       })}
                     </div>
-                    <div className='flex flex-col gap-y-2'>
+                    {/* <div className='flex flex-col gap-y-2'>
                       <div className='text-primary'>
                         More Information
                       </div>
                       <div className='border-b border-border'></div>
                       <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil modi porro ipsum consequatur iste facere fugiat voluptatibus praesentium molestiae! Officiis sapiente ipsa repellat hic, eligendi itaque impedit officia totam reprehenderit.</div>
-                    </div>
+                    </div> */}
                   </div>
                 </TabsContent>
               </div>

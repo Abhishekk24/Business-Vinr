@@ -102,13 +102,14 @@ const admins = [
 ]
 
 const categories = [
-  "motivation",
-  "career development"
+  "business"
 ]
 
 const blogs = () => {
 
   const [posts, setPosts] = useState(null);
+
+  const [allPost, setAllPost] = useState(null)
 
   const [images, setImages] = useState([])
 
@@ -137,6 +138,7 @@ const blogs = () => {
     }
     
   }, [posts])
+
 
 
   const handleTagClick = (category) => {
