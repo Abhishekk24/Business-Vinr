@@ -107,7 +107,7 @@
 // export default Work
 
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSpring, animated, config } from 'react-spring';
 import ProjectCard from '@/components/ProjectCard';
 import { Tabs, TabsList, TabsContent, TabsTrigger } from '@/components/ui/tabs';
@@ -165,17 +165,33 @@ const projectData = [
 
 const Page = () => {
   const [category, setCategory] = useState('all partners');
+  const [isSmallDevice, setIsSmallDevice] = useState(false);
 
   const filterProducts = projectData.filter(
     (product) => category === 'all partners' ? product : product.category === category
   );
+  useEffect(() => {
+    const checkWindowSize = () => {
+      setIsSmallDevice(window.innerWidth < 600); // Adjust the threshold as needed
+    };
 
+    checkWindowSize(); // Initial check
+
+    // Listen for window resize events
+    window.addEventListener('resize', checkWindowSize);
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', checkWindowSize);
+    };
+  }, []);
   return (
     <section className="min-h-screen pt-12 ">
       <div className="container mx-auto">
-        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
-          Authorised Distributor
+      <h2 className={`section-title mb-4 xl:mb-8 text-center mx-auto text-4xl xl:text-1xl ${isSmallDevice ? 'text-2xl' : ''}`}>
+          {isSmallDevice ? 'Distributor' : 'Authorised Distributor'}
         </h2>
+
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
           <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
             {filterProducts.map((product, index) => (
