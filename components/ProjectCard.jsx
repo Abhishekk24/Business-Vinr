@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 const ProjectCard = ({project}) => {
   return (
-    <Card className='group overflow-hidden relative w-[430px] h-[450px]' >
+    <Card className='group overflow-hidden relative sm:w-[400px] sm:h-[450px]' >
         <CardHeader className='p-0'>
           <div className='relative w-full h-[200px] flex items-center justify-center bg-tertiary dark:bg-secondary/40  xl:bg-work_product_bg_light 
           xl:dark:bg-work_product_bg_dark
