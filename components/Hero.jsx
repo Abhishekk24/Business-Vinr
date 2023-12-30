@@ -26,7 +26,7 @@ function Hero() {
             <h1 className="h1 mb-4">
               Networking and Solutions
             </h1>
-            <p className="subtitle max-w-[490px] mx-auto xl:mx-0">Add more infor about business</p>
+            <p className="subtitle max-w-[490px] mx-auto xl:mx-0"></p>
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href='/contact'>
                 <Button className="gap-x-2">ContactMe <Send size={18} /></Button>
