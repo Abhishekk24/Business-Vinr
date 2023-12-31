@@ -12,7 +12,7 @@ const infoData = [
   },
   {
     icon: <PhoneCall size={20} />,
-    text: '+91 9168224365',
+    text: '+91 9373900581',
   },
   {
     icon: (

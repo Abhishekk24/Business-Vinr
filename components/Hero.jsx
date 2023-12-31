@@ -23,7 +23,7 @@ function Hero() {
             <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
               Vinr Enterprises
             </div>
-            <h1 className="h1 mb-4 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="font-bold mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl lg:overflow-hidden">
               Networking and Solutions
             </h1>
             <p className="subtitle max-w-[490px] mx-auto xl:mx-0"></p>
