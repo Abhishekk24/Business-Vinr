@@ -27,7 +27,7 @@ const infoData = [
     text: 'Since 2000',
   },
   {
-    icon: <HomeIcon size={20} />,
+    icon: <Link href ='/contact'><HomeIcon size={20} /></Link>,
     text: 'Nashik',
   },
 ];

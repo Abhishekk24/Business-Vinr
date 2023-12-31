@@ -31,9 +31,9 @@ function Hero() {
               <Link href='/contact'>
                 <Button className="gap-x-2">ContactMe <Send size={18} /></Button>
               </Link>
-              <Link href='/'>
+              {/* <Link href='/'>
                 <Button variant="secondary" className="gap-x-2">Download Brochure <Download size={18} /></Button>
-              </Link>
+              </Link> */}
             </div>
             <Socials containerStyles='flex gap-x-6 mx-auto xl:mx-0 ' iconsStyles='text-foreground text-[22px] hover:text-primary transition-all' />
           </div>

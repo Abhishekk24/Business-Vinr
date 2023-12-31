@@ -104,7 +104,7 @@ function Contact() {
               </div>
               <div className="flex items-center mb-2 py-1">
                 <PhoneCall className="w-6 h-6 mr-2" />
-                <span>Phone: +91 9168224365</span>
+                <span>Phone: +91 9373900581</span>
               </div>
               <div className="flex items-center ">
                 <HomeIcon className="w-6 h-6 mr-2" />
