@@ -1,21 +1,25 @@
-// pages/_app.js (or pages/_app.tsx for TypeScript)
+// layout.jsx
 
-import '../styles/globals.css'
+import Head from 'next/head'; // Import Head from next
+
+import { Raleway } from 'next/font/google'
+import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { ThemeProvider } from '@/components/ThemeProvider'
-import Head from 'next/head'; // Import Head from next
+
+const inter = Raleway({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Vinr Enterprises',
   description: 'Business App',
 }
 
-function MyApp({ Component, pageProps }) {
+export default function RootLayout({ children }) {
   return (
     <>
       <Head>
-        {/* Add your Google Analytics script here */}
+        {/* Google Analytics script */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PFT7ND6TC"></script>
         <script
           dangerouslySetInnerHTML={{
@@ -28,14 +32,16 @@ function MyApp({ Component, pageProps }) {
           }}
         />
       </Head>
-      
-      <ThemeProvider attribute='class' defaultTheme='light'>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
-      </ThemeProvider>
+
+      <html lang="en" suppressHydrationWarning>
+        <body className={inter.className}>
+          <ThemeProvider attribute='class' defaultTheme='light'>
+            <Header />
+            {children}
+            <Footer />
+          </ThemeProvider>
+        </body>
+      </html>
     </>
   )
 }
-
-export default MyApp
