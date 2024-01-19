@@ -20,14 +20,14 @@ export default function RootLayout({ children }) {
     <>
       <Head>
         {/* Google Analytics script */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-8PFT7ND6TC"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3X50D6XZ5C"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-8PFT7ND6TC');
+              gtag('config', 'G-3X50D6XZ5C');
             `,
           }}
         />
